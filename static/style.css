@@ -1,0 +1,181 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+.small-checkbox {
+  font-size: 12px; /* Taille de texte réduite pour être discrète */
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  color: #555;
+}
+
+.small-checkbox input[type="checkbox"] {
+  width: 14px;  /* Réduisez la largeur de la case */
+  height: 14px; /* Réduisez la hauteur de la case */
+  margin-right: 5px;
+  cursor: pointer; /* Ajoute un curseur en forme de main */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #009579;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.form header {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form input {
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form a {
+  font-size: 15px;
+  color: #009579;
+  text-decoration: none;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form input.button {
+  color: #fff;
+  background: #009579;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.4s;
+  border: none;
+}
+
+.form input.button:hover {
+  background: #006653;
+}
+
+.signup {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.signup a {
+  color: #009579;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .form header {
+    font-size: 1.6rem;
+  }
+
+  .form input {
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .form input.button {
+    font-size: 1rem;
+  }
+
+  .signup {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form header {
+    font-size: 1.4rem;
+  }
+
+  .form input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .form input.button {
+    font-size: 0.9rem;
+  }
+
+  .signup {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .signup a {
+    color: #009579;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .signup a:hover {
+    text-decoration: underline;
+  }
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.button-container .button {
+  color: #fff;
+  background: #009579;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.button-container .button:hover {
+  background: #006653;
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Connexion</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="login form">
+      <header>Connexion</header>
+      <form id="loginForm">
+        <input type="text" placeholder="Entrez votre email ou téléphone" id="loginIdentifier" required>
+        <input type="password" placeholder="Entrez votre mot de passe" id="loginPassword" required>
+        <a href="#">Mot de passe oublié ?</a>
+        <input type="button" class="button" value="Connexion" onclick="loginUser()">
+      </form>
+      <div class="signup">
+        <span>Pas encore de compte ? <a href="{{ url_for('serve_register') }}">S'inscrire</a></span>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

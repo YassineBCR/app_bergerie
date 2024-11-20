@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+</head>
+<body>
+    <h1>Tableau de Bord</h1>
+    <p id="dashboard-message"></p>
+
+    <script>
+        async function loadDashboardData() {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                document.getElementById("dashboard-message").innerText = "Erreur : Vous devez être connecté";
+                return;
+            }
+
+            const response = await fetch('/dashboard_data', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById("dashboard-message").innerText = data.message;
+            } else {
+                document.getElementById("dashboard-message").innerText = "Erreur : accès refusé";
+            }
+        }
+
+        // Charger les données du tableau de bord après le chargement de la page
+        window.onload = loadDashboardData;
+    </script>
+</body>
+</html>
